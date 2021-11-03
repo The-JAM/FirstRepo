@@ -8,7 +8,7 @@ Tracks what music an individual listens to, and pairs them with others based on 
 
 App Evaluation
 
-Category: Social Networking / Music
+Category: ECommerce/ Video Games
 
 Story: Analyzes users music choices, and connects them to other users with similar choices. The user can then decide to message this person and befriend them if wanted.
 
