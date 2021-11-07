@@ -5,8 +5,10 @@ Overview
 
 Description
 
+
 A student built game site as a class project that features the latest games, and personalized functionality if user makes
-an account.
+
+
 
 App Evaluation
 
@@ -51,6 +53,7 @@ Search Engine where user can search for game by string of chars
 
 Filtering games by genre
 
+
 Profile page customization
 
 
@@ -71,8 +74,6 @@ show user current items in cart and allows them to make a purchase
 
 Purchase page
 shows user items in cart as well as total of the items they are about to buy
-
-
 
 
 [BONUS] Digital Wireframes & Mockups![](/Users/amanimuller/Desktop/COP_3060/ClassProject/mockup.jpeg)
