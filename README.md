@@ -76,6 +76,6 @@ Purchase page
 shows user items in cart as well as total of the items they are about to buy
 
 
-[BONUS] Digital Wireframes & Mockups![](The-JAM/FirstRepo/blob/main/mockup.jpeg)
+[BONUS] Digital Wireframes & Mockups![](blob/main/mockup.jpeg)
 
 
