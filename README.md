@@ -1,4 +1,4 @@
-# GA&ME
+[# GA&ME
 
 
 Overview
@@ -75,6 +75,6 @@ shows user items in cart as well as total of the items they are about to buy
 
 
 
-[BONUS] Digital Wireframes & Mockups![](/Users/amanimuller/Desktop/COP_3060/ClassProject/mockup.jpeg)
+ **Digital Wireframes & Mockups!**
 
-
+![ScreenShot](https://github.com/The-JAM/FirstRepo/blob/main/mockup.jpeg)
