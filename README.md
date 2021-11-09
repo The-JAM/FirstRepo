@@ -12,6 +12,8 @@ A student built game site as a class project that features the latest games, and
 
 App Evaluation
 
+JAM.fig contains the Figma wireframe.
+
 
 Category: Ecommerce/ Video Game
 =======
