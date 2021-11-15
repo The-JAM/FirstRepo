@@ -81,3 +81,57 @@ shows user items in cart as well as total of the items they are about to buy
 [BONUS] Digital Wireframes & Mockups![](blob/main/mockup.jpeg)
 
 
+
+### Networking
+> List of network requests by screen:
+
+- Home Feed Screen
+```
+(READ/GET) Query all videos games 
+```
+
+- Register Screen
+```
+(Create/POST) Create a new User Object
+```
+
+- Login Screen
+```  
+(READ/GET) Get User Profile
+```
+
+- Individual Game Page
+```
+(READ/GET) Get specific game and data asscoiated with it
+```
+
+- Profile Screen
+``` 
+(Read/GET) Query logged in user object
+(Update/PUT) Update user profile image
+(Update/PUT) Update user profile info
+```
+
+- Cart Screen 
+``` 
+(Read/GET) All selected video games
+```
+
+- Payment Page
+```
+(Create/POST) Create user Purchase Order object
+```
+
+[IF EXISTS:] 
+```
+Existing API Endpoints
+An API Of   Video Game Database
+Base URL - https://api.igdb.com/v4/
+
+HTTP Verb	Endpoint	Description
+GET	       /games	        get a list of video games
+GET	       /keywords	return list of video games by keyword
+GET	       /search	        search for video game
+
+```
+
