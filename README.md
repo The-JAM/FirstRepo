@@ -80,6 +80,8 @@ shows user items in cart as well as total of the items they are about to buy
 
 [BONUS] Digital Wireframes & Mockups![](blob/main/mockup.jpeg)
 
+### Models
+![models](https://user-images.githubusercontent.com/61095672/142090912-02ec5e7f-4f33-47ba-b00c-0781705a76ac.PNG)
 
 
 ### Networking
