@@ -61,6 +61,9 @@ class Login extends Component {
                    <p className="forgot-password text-right">
                        Forgot <a href="https://www.google.com/">password?</a>
                    </p>
+                   <p className="forgot-password text-right">
+                       Register <a href="/register">Click Me!</a>
+                   </p>
                </div>
 
 
