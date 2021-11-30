@@ -1,23 +1,21 @@
 import React from "react";
-import {Container, Image, Nav, Navbar} from "react-bootstrap";
+import {Image, Nav, Navbar} from "react-bootstrap";
 import store_icon from "../assets/store_icon.png";
 import cart_image from "../assets/cart_image.png"
 
 class Header extends React.Component {
     render() {
         return (
-            <Navbar bg="dark" variant="dark">
-                <Container>
-                    <Navbar.Brand href="/"><Image src={store_icon} alt="Logo"/></Navbar.Brand>
-                    <Nav className="me-auto">
-                        <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/cart"><Image src={cart_image} alt="Cart"/></Nav.Link>
-                    </Nav>
-                </Container>
+            <Navbar className="justify-content-center">
+                <Nav.Link  href="/register">Register</Nav.Link>
+                <Nav.Link href="/">Store</Nav.Link>
+                <Navbar.Brand  pullLeft href="/"><Image src={store_icon} alt="Logo"/></Navbar.Brand>
+                <Nav.Link  href="/cart"><Image src={cart_image} alt="Cart"/></Nav.Link>
+                <Nav.Link  href="/login"> Login</Nav.Link>
             </Navbar>
         )
     }
-};
+}
 
 export default Header;
 

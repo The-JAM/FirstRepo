@@ -1,11 +1,11 @@
 import './App.css';
 import {AuthProvider} from "./context/AuthContext";
 import {Container} from "react-bootstrap";
-import {BrowserRouter, Switch} from "react-router-dom";
-import PublicRoute from "./components/PublicRoute";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Login from "./pages/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import Register from "./pages/Register";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -13,14 +13,12 @@ function App() {
         <Container>
           <BrowserRouter>
             <Switch>
-              <PublicRoute path="/login" component={Login}>
-                <Login />
-              </PublicRoute>
-              {/*<PublicRoute path="/" component={Home} >*/}
-              {/*</PublicRoute>*/}
-                <PublicRoute path="/register" component={Register}>
-                    <Register/>
-                </PublicRoute>
+                <Route  exact path="/" component={Home}>
+                </Route>
+                <Route exact path="/login" component={Login}>
+                </Route>
+                <Route exact path="/register" component={Register} >
+                </Route>
             </Switch>
           </BrowserRouter>
         </Container>

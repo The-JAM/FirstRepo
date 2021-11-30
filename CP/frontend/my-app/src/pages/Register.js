@@ -1,8 +1,9 @@
 import React, {Component} from "react";
 import {Button, Container, Form} from "react-bootstrap";
 import axios from "axios";
+import {withRouter} from "react-router-dom";
 
-class  Register extends Component {
+class Register extends Component {
 
     constructor(props) {
         super(props);
@@ -23,24 +24,21 @@ class  Register extends Component {
             email : this.emailRef.current.value,
             password : this.passwordRef.current.value
         }
-        console.log(data)
 
         await axios.post("http://localhost:8080/user", data).then((res) => {
             console.log(res.data)
         }).catch(err => console.log(err));
-        // this.props.history.push("/login");
+        this.props.history.push("/login");
     }
 
 
     render() {
         return (
-            <Container style={{
-                position: 'absolute', left: '50%', top: '50%',
-                transform: 'translate(-50%, -50%)'
-            }}>
+            <Container >
                 <Form >
                     <h3 style={{
-                        textAlign:"center"
+                        textAlign:"center",
+                        color :"#1b5633"
                     }} >Sign Up</h3>
 
                     <Form.Group id="firstName" className="mb-3">
@@ -61,7 +59,7 @@ class  Register extends Component {
                     </Form.Group>
                     <div className="p-2">
                         <Form.Group>
-                            <Button onClick={this.handleSubmit} type="submit" className="btn btn-primary btn-block w-100 ">Submit</Button>
+                            <Button  style={{color: "#ea6716", backgroundColor:  "#1b5633", borderColor: "#ea6716" }} onClick={this.handleSubmit} type="submit" className="btn btn-primary btn-block w-100 ">Submit</Button>
                         </Form.Group>
                     </div>
 
@@ -72,4 +70,4 @@ class  Register extends Component {
     }
 }
 
-export default Register;
+export default withRouter(Register);

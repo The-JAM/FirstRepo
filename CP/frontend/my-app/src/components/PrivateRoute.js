@@ -1,27 +1,27 @@
-import {Route, Redirect } from 'react-router-dom';
 import {useContext} from "react";
 import {AuthContext} from "../context/AuthContext";
+import React from 'react';
+import { Route, Redirect } from 'react-router-dom';
 
-function PrivateRoute({ component: Component, ...rest }) {
+const PrivateRoute = ({component: Component, ...rest}) => {
 
-    let { currentUser } = useContext(AuthContext);
+    const { currentUser } = useContext(AuthContext);
     if(currentUser!= null && currentUser.length > 0)
     {
         localStorage.setItem("user", JSON.stringify(currentUser));
-
     }
 
-    let localStorageItem = localStorage.getItem("user")
-
+    let localStorageItem = localStorage.getItem("user");
     return (
 
-        <Route
-            {...rest}
-            render={ props => localStorageItem ? (<Component {...props} />)
-                : (<Redirect to={{pathname: '/login'}}/>)
-            }
-        />
+        // Show the component only when the user is logged in
+        // Otherwise, redirect the user to /signin page
+        <Route {...rest} render={props => (
+            localStorageItem ?
+                <Redirect to="/" />
+                : <Component {...props} />
+        )} />
     );
-}
+};
 
 export default PrivateRoute;

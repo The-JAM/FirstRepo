@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {Button, Container, Form} from "react-bootstrap";
 import {AuthContext} from "../context/AuthContext";
-import {withRouter} from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
 
 class Login extends Component {
 
@@ -55,14 +55,14 @@ class Login extends Component {
                 </Form.Group>
                <div className="p-2">
                    <Form.Group>
-                       <Button onClick={this.handleSubmit} type="submit" className="btn btn-primary btn-block w-100 ">Submit</Button>
+                       <Button style={{color: "#ea6716", backgroundColor:  "#1b5633", borderColor: "#ea6716" }}onClick={this.handleSubmit} type="submit" className="btn btn-primary btn-block w-100 ">Submit</Button>
                    </Form.Group>
 
                    <p className="forgot-password text-right">
-                       Forgot <a href="https://www.google.com/">password?</a>
+                       Forgot <Link style={{color: "#1b5633"}} to="/">password?</Link>
                    </p>
                    <p className="forgot-password text-right">
-                       Register <a href="/register">Click Me!</a>
+                       Register <Link style={{color: "#1b5633"}} to="/register">Click Me!</Link>
                    </p>
                </div>
 
