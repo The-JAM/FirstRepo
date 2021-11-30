@@ -165,6 +165,8 @@ Current Project Images:
 - Login Page
 ![alt text](https://github.com/The-JAM/FirstRepo/blob/main/SignInPage.png)
 
+- Current Project Gif
+![alt text](https://github.com/The-JAM/FirstRepo/blob/main/CurrentProject.gif)
 
 
 
