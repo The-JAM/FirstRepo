@@ -137,3 +137,32 @@ GET	       /search	        search for video game
 
 ```
 
+
+Completed Task:
+
+- Home Page
+All user to see all current games available in our selection
+
+- Login Page
+Allows user to be able to be able to login into a personal account
+
+- Register Page
+Allow User to be able to sign up
+
+- Register Screen
+```
+(Create/POST) Create a new User Object
+```
+
+Current Project Images:
+
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+
+
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+
+
+
+
