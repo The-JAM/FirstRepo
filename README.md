@@ -156,12 +156,14 @@ Allow User to be able to sign up
 
 Current Project Images:
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+- Sign Up Page
+![alt text](https://github.com/The-JAM/FirstRepo/blob/main/SignInPage.png)
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+-Home Page
+![alt text](https://github.com/The-JAM/FirstRepo/blob/main/HomePage.png)
 
-
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+- Login Page
+![alt text](https://github.com/The-JAM/FirstRepo/blob/main/SignInPage.png)
 
 
 
