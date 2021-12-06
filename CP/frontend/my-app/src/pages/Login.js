@@ -14,18 +14,12 @@ class Login extends Component {
 
     }
 
-    // componentDidMount() {
-    //     let user = JSON.parse(localStorage.getItem("user"));
-    //     if(user)
-    //         this.props.history.push("/home");
-    // }
-
-
     async handleSubmit(evt){
         const context = this.context;
         evt.preventDefault();
         await context.signIn(this.usernameRef.current.value, this.passwordRef.current.value);
-        this.props.history.push("/home");
+        this.props.history.push("/");
+        window.location.reload();
     }
     render() {
         return (
@@ -39,7 +33,7 @@ class Login extends Component {
                 }} >Sign In</h3>
 
                 <Form.Group id="username" className="mb-3">
-                    <Form.Label>Username</Form.Label>
+                    <Form.Label>Email</Form.Label>
                     <Form.Control type="text" required ref={this.usernameRef} />
                 </Form.Group>
                 <Form.Group id="password" className="mb-3">

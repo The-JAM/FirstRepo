@@ -1,9 +1,11 @@
 import React from 'react';
-import {Button, Card, Col, Container, ListGroup} from "react-bootstrap";
-import { Row } from 'react-bootstrap';
+import {Button, Card, Col, ListGroup} from "react-bootstrap";
 import ReactStars from "./StarRating";
+import {useCart} from "../context/Cart";
 
-function Games({games, isSelected}) {
+function Games({games, onClick , isSelected}) {
+
+    const { addToCart} = useCart();
     let game_platforms = games.parent_platforms;
     const gameRating = ((games.rating * (1 / 10)) / 2) * 10; // converting game to an avg out of 5 stars
 
@@ -16,6 +18,9 @@ function Games({games, isSelected}) {
 
     let gamesId = games.id;
     let game_image = games.background_image;
+    let game_price = createPrice();
+    let game_title = games.name;
+    let quantity = 1;
 
 
     // if we havent selected a move render all games
@@ -27,11 +32,11 @@ function Games({games, isSelected}) {
                     <Card.Img variant="top" style={{width: "100%",  height: "16vw", objectFit: "cover"}} src={game_image}
                               className="mx-auto" />
                     <Card.Body>
-                        <Card.Title>{games.name}</Card.Title>
+                        <Card.Title>{game_title}</Card.Title>
                         <hr/>
-                        <div>
+                        <span>
                             <ReactStars {...starSetting}/>
-                        </div>
+                        </span>
                         <Card.Subtitle>Platforms:</Card.Subtitle>
                         <br/>
                         <ListGroup variant="flush">
@@ -42,7 +47,8 @@ function Games({games, isSelected}) {
                         <hr/>
                         <Card.Text>
                             <div>
-                               <Button style={{color: "#1b5633", backgroundColor: "#ea6716", borderColor:"#ea6716"}}> Add to Cart</Button>
+                                <Card.Text> Price: {game_price} </Card.Text>
+                               <Button style={{color: "#1b5633", backgroundColor: "#ea6716", borderColor:"#ea6716", float: "right"}}  onClick={onClick}> Add to Cart</Button>
                             </div>
                         </Card.Text>
                     </Card.Body>
@@ -50,6 +56,11 @@ function Games({games, isSelected}) {
             </Col>
         );
     }
+}
+
+function createPrice(){
+    let price = parseFloat((Math.random() * 100.99).toFixed(2));
+    return price;
 }
 
 export default Games;
