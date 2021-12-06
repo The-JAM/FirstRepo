@@ -9,7 +9,6 @@ class Home extends  Component
 
     constructor(props) {
         super(props);
-        this.movieId = props.movieId;
         this.isSelected = props.isSelected;
         this.state = {
             games: []
@@ -24,7 +23,6 @@ class Home extends  Component
             const GAME_LIBRARY_URL = `https://api.rawg.io/api/games?key=${process.env["REACT_APP_API_KEY"]}`
             await axios.get(GAME_LIBRARY_URL)
                 .then(response => {
-                    console.log(response.data.results)
                     this.setState({games: response.data.results});
 
                 }).catch((err) => {
@@ -38,12 +36,23 @@ class Home extends  Component
 
     }
 
+    onClick(evt)
+    {
+        console.log(evt.value)
+        // let gamesId = games.id;
+        // let game_image = games.background_image;
+        // let game_price = createPrice();
+        // let game_title = games.name;
+        // let quantity = 1;
+        // addToCart({game_title, game_image,quantity,game_price})
+    }
+
 
     render() {
         return(
             <Row>
                 {
-                    this.state.games.map((game,i) => <Games games={game} isSelected={false} key={i}  /> )
+                    this.state.games.map((game,i) => <Games games={game} onClick={this.onClick.bind(this,game)} isSelected={false} key={i}  /> )
                 }
             </Row>
 

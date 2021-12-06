@@ -26,7 +26,7 @@ class Register extends Component {
         }
 
         await axios.post("http://localhost:8080/user", data).then((res) => {
-            console.log(res.data)
+            alert("Success")
         }).catch(err => console.log(err));
         this.props.history.push("/login");
     }
