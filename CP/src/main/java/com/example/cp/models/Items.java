@@ -1,29 +1,21 @@
 package com.example.cp.models;
 
 public class Items {
-    private String sku;
     private String productName;
-    private Number quantity;
-    private Number unitPrice;
-    private String unit;
+    private String gameImageUrl;
+    private Double gamePrice;
+    private Integer quantity;
+    private Double price;
 
     public Items() {
     }
 
-    public Items(String sku, String productName, Number quantity, Number unitPrice, String unit) {
-        this.sku = sku;
+    public Items(String productName, String gameImageUrl, Double gamePrice, Integer quantity, Double price) {
         this.productName = productName;
+        this.gameImageUrl = gameImageUrl;
+        this.gamePrice = gamePrice;
         this.quantity = quantity;
-        this.unitPrice = unitPrice;
-        this.unit = unit;
-    }
-
-    public String getSku() {
-        return sku;
-    }
-
-    public void setSku(String sku) {
-        this.sku = sku;
+        this.price = price;
     }
 
     public String getProductName() {
@@ -34,27 +26,35 @@ public class Items {
         this.productName = productName;
     }
 
-    public Number getQuantity() {
+    public String getGameImageUrl() {
+        return gameImageUrl;
+    }
+
+    public void setGameImageUrl(String gameImageUrl) {
+        this.gameImageUrl = gameImageUrl;
+    }
+
+    public Double getGamePrice() {
+        return gamePrice;
+    }
+
+    public void setGamePrice(Double gamePrice) {
+        this.gamePrice = gamePrice;
+    }
+
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Number quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
-    public Number getUnitPrice() {
-        return unitPrice;
+    public Double getPrice() {
+        return price;
     }
 
-    public void setUnitPrice(Number unitPrice) {
-        this.unitPrice = unitPrice;
-    }
-
-    public String getUnit() {
-        return unit;
-    }
-
-    public void setUnit(String unit) {
-        this.unit = unit;
+    public void setPrice(Double price) {
+        this.price = price;
     }
 }
