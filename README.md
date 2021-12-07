@@ -153,6 +153,20 @@ Allow User to be able to sign up
 ```
 (Create/POST) Create a new User Object
 ```
+```
+(/POST) return user object
+```
+
+-Cart page
+show user current items in cart and allows them to make a purchase
+
+-Purchase page
+shows user items in cart as well as total of the items they are about to buy
+
+```
+(Create/POST) Create a new Purchase Order
+```
+
 
 Current Project Images:
 
@@ -164,6 +178,9 @@ Current Project Images:
 
 - Login Page
 ![alt text](https://github.com/The-JAM/FirstRepo/blob/main/SignInPage.png)
+
+- Cart Page
+![alt text](https://github.com/The-JAM/FirstRepo/blob/main/CartPage.png)
 
 - Current Project Gif
 ![alt text](https://github.com/The-JAM/FirstRepo/blob/main/CurrentProject.gif)
