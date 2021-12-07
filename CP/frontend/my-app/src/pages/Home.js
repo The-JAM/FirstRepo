@@ -1,7 +1,7 @@
 import {Component} from "react";
 import axios from "axios";
 import {Row} from "react-bootstrap";
-import Games from "../components/Games";
+import Games, {createPrice} from "../components/Games";
 import {withRouter} from "react-router-dom";
 
 class Home extends  Component
@@ -11,7 +11,8 @@ class Home extends  Component
         super(props);
         this.isSelected = props.isSelected;
         this.state = {
-            games: []
+            games: [],
+            cart : []
         }
     }
 
@@ -38,13 +39,49 @@ class Home extends  Component
 
     onClick(evt)
     {
-        console.log(evt.value)
-        // let gamesId = games.id;
-        // let game_image = games.background_image;
-        // let game_price = createPrice();
-        // let game_title = games.name;
-        // let quantity = 1;
-        // addToCart({game_title, game_image,quantity,game_price})
+
+        function isItemFound(item, cart) {
+            let value = false;
+            let index  = -1;
+            for (let i = 0; i < cart.length; i++) {
+               if(cart[i].productName === item.productName)
+               {
+                   value = true;
+                   index = i;
+               }
+            }
+
+            return [value , index]
+        }
+        let gamesId = evt.id;
+        let game_image = evt.background_image;
+        let game_price = createPrice();
+        let game_title = evt.name;
+        let quantity = 1;
+        let item = {}
+        item.productName = game_title;
+        item.gameImageUrl = game_image;
+        item.quantity = quantity;
+        item.price = game_price;
+
+        if (sessionStorage.length !== 0)
+        {
+           this.state.cart =  JSON.parse(sessionStorage.getItem("items"))
+        }
+
+        let currentlyFound = isItemFound(item,this.state.cart)[0]
+
+
+        if (currentlyFound)
+        {
+            let itemIndex  = isItemFound(item,this.state.cart)[1]
+            this.state.cart[itemIndex].quantity += 1;
+        }
+        else
+            this.state.cart.push(item)
+
+        sessionStorage.setItem("items", JSON.stringify(this.state.cart));
+
     }
 
 

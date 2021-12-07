@@ -3,24 +3,27 @@ package com.example.cp.models;
 import com.google.cloud.Timestamp;
 import com.google.cloud.firestore.DocumentReference;
 
+import java.lang.reflect.Array;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class RestPurchaseOrder {
     private Number CVV;
     private Number cardNumber;
     private String lastName;
     private String firstName;
+    private String email;
     private Timestamp expirationDate;
-    private DocumentReference createdBy;
+    private ArrayList<Items> items = new ArrayList<>();
 
-
-    public RestPurchaseOrder(Number CVV, Number cardNumber, String lastName, String firstName, Timestamp expirationDate, DocumentReference createdBy) {
+    public RestPurchaseOrder(Number CVV, Number cardNumber, String lastName, String firstName, Timestamp expirationDate, ArrayList<Items> items) {
         this.CVV = CVV;
         this.cardNumber = cardNumber;
         this.lastName = lastName;
         this.firstName = firstName;
         this.expirationDate = expirationDate;
-        this.createdBy = createdBy;
+        this.items = items;
     }
 
     public Number getCVV() {
@@ -63,11 +66,11 @@ public class RestPurchaseOrder {
         this.expirationDate = expirationDate;
     }
 
-    public DocumentReference getCreatedBy() {
-        return createdBy;
+    public ArrayList<Items> getItems() {
+        return items;
     }
 
-    public void setCreatedBy(DocumentReference createdBy) {
-        this.createdBy = createdBy;
+    public void setItems(ArrayList<Items> items) {
+        this.items = items;
     }
 }

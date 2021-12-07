@@ -37,3 +37,17 @@ code {
 .p.a {
   color: #ea6716;
 }
+
+.form-label
+{
+  color: #ea6716;
+}
+
+#checkout-form{
+  font-size:large;
+  padding: 15px;
+}
+
+.card {
+  background-color: #1b5633;
+}

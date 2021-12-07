@@ -1,40 +1,42 @@
 package com.example.cp.models;
 
-import java.time.LocalDateTime;
+import com.google.cloud.Timestamp;
+
+import java.util.ArrayList;
 
 public class PurchaseOrder {
-    protected Number CVV;
-    protected Number cardNumber;
+    protected String CVV;
+    protected String cardNumber;
     protected String lastName;
     protected String firstName;
-    protected LocalDateTime expirationDate;
-    protected User createdBy;
+    protected  String email;
+    protected Timestamp expirationDate;
+    protected ArrayList<Items> items;
 
-public PurchaseOrder() {
-}
 
-public PurchaseOrder(Number CVV, Number cardNumber, String lastName, String firstName, LocalDateTime expirationDate, User createdBy) {
-    this.CVV = CVV;
-    this.cardNumber = cardNumber;
-    this.lastName = lastName;
-    this.firstName = firstName;
-    this.expirationDate = expirationDate;
-    this.createdBy = createdBy;
+    public PurchaseOrder(String CVV, String cardNumber, String lastName, String firstName, String email, Timestamp expirationDate, ArrayList<Items> items) {
+        this.CVV = CVV;
+        this.cardNumber = cardNumber;
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.email = email;
+        this.expirationDate = expirationDate;
+        this.items = items;
     }
 
-    public Number getCVV() {
+    public String getCVV() {
         return CVV;
     }
 
-    public void setCVV(Number CVV) {
+    public void setCVV(String CVV) {
         this.CVV = CVV;
     }
 
-    public Number getCardNumber() {
+    public String getCardNumber() {
         return cardNumber;
     }
 
-    public void setCardNumber(Number cardNumber) {
+    public void setCardNumber(String cardNumber) {
         this.cardNumber = cardNumber;
     }
 
@@ -54,19 +56,19 @@ public PurchaseOrder(Number CVV, Number cardNumber, String lastName, String firs
         this.firstName = firstName;
     }
 
-    public LocalDateTime getExpirationDate() {
+    public Timestamp getExpirationDate() {
         return expirationDate;
     }
 
-    public void setExpirationDate(LocalDateTime expirationDate) {
+    public void setExpirationDate(Timestamp expirationDate) {
         this.expirationDate = expirationDate;
     }
 
-    public User getCreatedBy() {
-        return createdBy;
+    public ArrayList<Items> getItems() {
+        return items;
     }
 
-    public void setCreatedBy(User createdBy) {
-        this.createdBy = createdBy;
+    public void setItems(ArrayList<Items> items) {
+        this.items = items;
     }
 }

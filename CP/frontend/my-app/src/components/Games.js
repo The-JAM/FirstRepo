@@ -1,11 +1,9 @@
 import React from 'react';
 import {Button, Card, Col, ListGroup} from "react-bootstrap";
 import ReactStars from "./StarRating";
-import {useCart} from "../context/Cart";
 
-function Games({games, onClick , isSelected}) {
+function Games({games,onClick, isSelected}) {
 
-    const { addToCart} = useCart();
     let game_platforms = games.parent_platforms;
     const gameRating = ((games.rating * (1 / 10)) / 2) * 10; // converting game to an avg out of 5 stars
 
@@ -48,7 +46,7 @@ function Games({games, onClick , isSelected}) {
                         <Card.Text>
                             <div>
                                 <Card.Text> Price: {game_price} </Card.Text>
-                               <Button style={{color: "#1b5633", backgroundColor: "#ea6716", borderColor:"#ea6716", float: "right"}}  onClick={onClick}> Add to Cart</Button>
+                               <Button style={{color: "#1b5633", backgroundColor: "#ea6716", borderColor:"#ea6716", float: "right"}} onClick={onClick} > Add to Cart</Button>
                             </div>
                         </Card.Text>
                     </Card.Body>
@@ -58,7 +56,7 @@ function Games({games, onClick , isSelected}) {
     }
 }
 
-function createPrice(){
+export function createPrice(){
     let price = parseFloat((Math.random() * 100.99).toFixed(2));
     return price;
 }
